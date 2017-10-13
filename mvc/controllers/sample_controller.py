@@ -30,6 +30,8 @@ def post_somthing():
     return json.dumps(data)
 
 ####以下是基本SQL CRUD 基本操作####
+#如果有兩個以上的軟體同時操作資料庫的話
+#每個request結束後必須呼叫db.session.close()，否則資料不會刷新
 
 #Create_Table
 #Code-First作法，寫好Models後直接創建Tables
